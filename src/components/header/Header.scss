@@ -1,0 +1,44 @@
+#header {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: absolute;
+    height: 100vh;
+    background: linear-gradient(#182b5e,#9b2d9a 20%, #182b5e);
+    color: white;
+    &--logo {
+      height: 30px;
+      padding: 20px 0;
+    }
+    &--nav {
+      height: 180px;
+      font-size: 26px;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__btn {
+        cursor: pointer;
+        &:hover {
+          color: #111;
+        }
+      }
+    }
+    &--nav-two {
+      &__btn {
+        cursor: pointer;
+        &:hover {
+          color: #111;
+        }
+      }
+      height: 200px;
+      font-size: 26px;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
