@@ -1,0 +1,43 @@
+
+@media (max-width: 768px) {
+  #header {
+    .header {
+      display: flex;
+      flex-direction: row;
+      width: 93%;
+      height: 13vh;
+      bottom: 0;
+      align-items: center;
+      &--logo {
+      }
+      &--nav {
+        width: 180px;
+        height: 180px;
+        flex-direction: row;
+        font-size: 26px;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__btn {
+          &:hover {
+          }
+        }
+      }
+      &--nav-two {
+        flex-direction: row;
+        height: 200px;
+        font-size: 26px;
+        padding: 50px 0;
+        display: flex;
+        width: 220px;
+        justify-content: space-between;
+        align-items: center;
+        &__btn {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+}
