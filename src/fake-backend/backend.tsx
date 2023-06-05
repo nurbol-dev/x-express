@@ -1,7 +1,7 @@
 import uniqid from "uniqid"
 import tea from "../assets/image/tea.jpg"
 import coffe from "../assets/image/coffee.jpg"
-import cola from "../assets/image/coca-cola-png.png"
+import cola from "../assets/image/cola2.png"
 import {BackendState} from "../types/Backend";
 export const data: BackendState[] = [
     {
