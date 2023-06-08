@@ -1,0 +1,29 @@
+.product-card{
+  margin-left: 100px;
+  &-content{
+    background-color: #8C52FF;
+    width: 300px;
+    height: 550px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .product-card-block{
+      .product-main{
+        .product-card-info{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          border: 1px solid white;
+          width: 180px;
+          height: 40px;
+          border-radius: 20px;
+          .product-card-icon{
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}

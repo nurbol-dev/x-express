@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Header.scss"
-import "./Media/HeaderMedia.scss"
 import {BsBoxSeam, BsGlobe} from "react-icons/bs";
 import {CgDarkMode} from "react-icons/cg";
 import {SlBasket} from "react-icons/sl";
 import {MdFavoriteBorder, MdOutlineTextsms} from "react-icons/md";
 import {BiUserCircle} from "react-icons/bi";
+import {useNavigate} from "react-router-dom";
+import {Simulate} from "react-dom/test-utils";
+import pointerDown = Simulate.pointerDown;
+
 
 const Header = () => {
     return (
