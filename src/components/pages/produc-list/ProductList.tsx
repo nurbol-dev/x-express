@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./ProductList.scss"
 import {data} from "../../../fake-backend/backend";
 import {MdFavoriteBorder} from "react-icons/md";
+import ProductCard from "../product-card/Product-card";
 
 const ProductList = () => {
     const [modal, setModal] = useState(false)

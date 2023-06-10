@@ -1,26 +1,34 @@
 .product-card{
-  margin-left: 100px;
+  padding: 100px 0 0 22px;
+  position: absolute;
+  left: 100px;
+  z-index: 10;
+
   &-content{
     background-color: #8C52FF;
-    width: 300px;
-    height: 550px;
+    width: 270px;
+    height: 450px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     .product-card-block{
+      .product-title{
+        text-align: center;
+        color: white;
+      }
       .product-main{
         .product-card-info{
           display: flex;
           align-items: center;
-          justify-content: center;
           margin-top: 20px;
           border: 1px solid white;
           width: 180px;
           height: 40px;
           border-radius: 20px;
-          .product-card-icon{
-            text-align: start;
+          color: white;
+          .product-icon{
+            margin: 0 20px;
           }
         }
       }
