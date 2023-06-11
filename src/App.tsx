@@ -4,17 +4,17 @@ import Header from "./components/header/Header";
 import ProductList from "./components/pages/produc-list/ProductList";
 import {Route, Routes} from "react-router-dom";
 import ProductCard from "./components/pages/product-card/Product-card";
+import ProductJuices from "./components/pages/product-juice/Product-juices";
+
 function App() {
     return (
-    <>
-        <Header/>
-        <ProductCard/>
-        <Routes>
-            <Route path={'/'} element={<ProductList/>}/>
-            {/*<Route path={'/product-card'} element={<ProductCard/>}/>*/}
-        </Routes>
-    </>
-  );
+        <>
+            <Header/>
+            <ProductCard/>
+            <ProductList/>
+            <ProductJuices/>
+        </>
+    );
 }
 
 export default App;

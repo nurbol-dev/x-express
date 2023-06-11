@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './style.scss'
+import './Product-card.scss'
 import {GiBeerBottle, GiFruitBowl} from "react-icons/gi";
 import {TbBread} from "react-icons/tb";
 import {BiTestTube} from "react-icons/bi";
@@ -13,6 +13,7 @@ const ProductCard = () => {
         <>
             {
                 productCard ?
+
                     <div className="product-card">
                         <div className="container">
                             <div className="product-card-content">

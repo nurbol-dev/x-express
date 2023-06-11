@@ -16,3 +16,8 @@ input{
     outline: none;
     border: none;
 }
+
+body{
+    overflow: auto;
+}
+

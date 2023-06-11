@@ -1,7 +1,9 @@
+
+
 .product-card{
   padding: 100px 0 0 22px;
-  position: absolute;
-  left: 100px;
+  position: fixed;
+  left: 54px;
   z-index: 10;
 
   &-content{

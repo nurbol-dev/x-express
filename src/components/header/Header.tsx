@@ -15,7 +15,6 @@ import {getProductCard} from "../../store/reducer/darkSlice";
 
 
 const Header = () => {
-    const [comp, setComp] = useState(false)
     const dispatch = useAppDispatch();
     const {productCard} = useAppSelector(state => state.dark)
 
