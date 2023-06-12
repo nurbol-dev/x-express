@@ -2,12 +2,14 @@ import {createSlice} from "@reduxjs/toolkit";
 
 interface IDarkSlice {
     dark: boolean,
-    productCard: boolean
+    productCard: boolean,
+    language: boolean
 }
 
 const initialState: IDarkSlice = {
     dark: false,
-    productCard: false
+    productCard: false,
+    language: false
 }
 
 export const darkSlice = createSlice({
@@ -16,8 +18,11 @@ export const darkSlice = createSlice({
     reducers: {
         getProductCard(state, action) {
             state.productCard = action.payload
+        },
+        getLanguage(state,{payload}) {
+            state.language = payload
         }
     }
 })
-export const {getProductCard} =darkSlice.actions
+export const {getProductCard,getLanguage} =darkSlice.actions
 export default darkSlice.reducer

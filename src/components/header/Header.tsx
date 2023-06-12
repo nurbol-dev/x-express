@@ -11,32 +11,37 @@ import pointerDown = Simulate.pointerDown;
 import ProductCard from "../pages/product-card/Product-card";
 import {useAppDispatch} from "../../hooks/useAppDispatch";
 import {useAppSelector} from "../../hooks/useAppSelector";
-import {getProductCard} from "../../store/reducer/darkSlice";
+import {getLanguage, getProductCard} from "../../store/reducer/darkSlice";
 
 
 const Header = () => {
     const dispatch = useAppDispatch();
-    const {productCard} = useAppSelector(state => state.dark)
+    const {productCard,language} = useAppSelector(state => state.dark)
 
     const getProduct = () => {
-            dispatch(getProductCard(!productCard))
+        dispatch(getProductCard(!productCard))
     }
-    console.log(productCard)
+    const getLanguageBtn = () => {
+        dispatch(getLanguage(!language))
+    }
+
     return (
         <div id="header">
             <div className="header">
-               <NavLink to="/">
-                   <div className="header--logo">
-                       logo
-                   </div>
-               </NavLink>
+                <NavLink to="/">
+                    <div className="header--logo">
+                        logo
+                    </div>
+                </NavLink>
                 <div className="header--nav">
-                  <div  onClick={() => {getProduct()}}> <BsBoxSeam className="header--nav__btn"/></div>
+                    <div onClick={() => {
+                        getProduct()
+                    }}><BsBoxSeam className="header--nav__btn"/></div>
                     <CgDarkMode className="header--nav__btn"/>
                     <SlBasket className="header--nav__btn"/>
                 </div>
                 <div className="header--nav-two">
-                    <BsGlobe className="header--nav-two__btn"/>
+                    <BsGlobe className="header--nav-two__btn" onClick={getLanguageBtn}/>
                     <MdFavoriteBorder className="header--nav-two__btn"/>
                     <MdOutlineTextsms className="header--nav-two__btn"/>
                     <BiUserCircle className="header--nav-two__btn"/>
