@@ -9,8 +9,9 @@
     background: linear-gradient(#182b5e,#9b2d9a 20%, #182b5e);
     color: white;
     &--logo {
+      width: 30px;
       height: 30px;
-      padding: 20px 0;
+      padding: 20px 0 0 0;
     }
     &--nav {
       height: 180px;

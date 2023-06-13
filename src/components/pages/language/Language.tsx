@@ -1,9 +1,10 @@
 import React from 'react';
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import "./Language.scss"
-
+import "./media/LanguageMedia.scss"
 const Language = () => {
     const {language, productCard} = useAppSelector(s => s.dark)
+
     return (
         <>
             <div className="language">
