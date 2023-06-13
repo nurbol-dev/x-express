@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import "./Header.scss"
+import "./Media/HeaderMedia.scss"
 import {BsBoxSeam, BsGlobe} from "react-icons/bs";
 import {CgDarkMode} from "react-icons/cg";
 import {SlBasket} from "react-icons/sl";
@@ -12,7 +13,7 @@ import ProductCard from "../pages/product-card/Product-card";
 import {useAppDispatch} from "../../hooks/useAppDispatch";
 import {useAppSelector} from "../../hooks/useAppSelector";
 import {getLanguage, getProductCard} from "../../store/reducer/darkSlice";
-
+import logo from "../../assets/image/logo.png"
 
 const Header = () => {
     const dispatch = useAppDispatch();
@@ -30,7 +31,7 @@ const Header = () => {
             <div className="header">
                 <NavLink to="/">
                     <div className="header--logo">
-                        logo
+                        <img width={50} height={50} src={logo} alt=""/>
                     </div>
                 </NavLink>
                 <div className="header--nav">
