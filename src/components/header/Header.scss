@@ -11,7 +11,8 @@
     &--logo {
       width: 30px;
       height: 30px;
-      padding: 20px 0 0 0;
+      position: absolute;
+      left: 10px;
     }
     &--nav {
       height: 180px;
@@ -28,6 +29,9 @@
       }
     }
     &--nav-two {
+      p {
+        cursor: pointer;
+      }
       &__btn {
         cursor: pointer;
         &:hover {
@@ -43,3 +47,4 @@
     }
   }
 }
+

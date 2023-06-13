@@ -1,7 +1,9 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import darkSlice from "./reducer/darkSlice";
+import logIn from "./reducer/logIn";
 const rootState = combineReducers({
-    dark:darkSlice
+    dark:darkSlice,
+    logIn,
 })
 
 
