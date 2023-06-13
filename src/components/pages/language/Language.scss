@@ -5,30 +5,14 @@
   &--group {
     display: flex;
     flex-direction: column;
-    &__kg {
-      background: linear-gradient(#e70505, #f6f309, #ea0606);
-    }
     &__ru {
       background: linear-gradient(#ffe4e4, #182b5e, #ea0606);
     }
-    &__en {
-      background: linear-gradient(#f80d0d, #ffe4e4, #ea0606, #ffe4e4, #ea0606, #eff6ff, #ea0606, #e5d3d3, #ea0606, #fff);
-      p {
-        position: relative;
-      }
-      &--block {
-        width: 15px;
-        height: 14px;
-        background: blue;
-        left: 6px;
-        bottom: 17px;
-        position: absolute;
-      }
-    }
     button {
+
       border: none;
       margin: 6px;
-      padding: 4px;
+      padding: 4px 8px;
     }
   }
 }
