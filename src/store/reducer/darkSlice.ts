@@ -13,7 +13,7 @@ const data: any = localStorage.getItem("date")
 const initialState: IDarkSlice = {
     dark: false,
     productCard: false,
-    juiceCard: false
+    juiceCard: false,
     language: false,
     upDateLan: JSON.parse(data) || ""
 }
@@ -27,10 +27,7 @@ export const darkSlice = createSlice({
         },
         getJuiceCard(state, action) {
             state.juiceCard = action.payload
-        }
-    }
-})
-export const {getProductCard, getJuiceCard} =darkSlice.actions
+        },
         getLanguage(state,{payload}) {
             state.language = payload
         },
@@ -39,5 +36,6 @@ export const {getProductCard, getJuiceCard} =darkSlice.actions
         }
     }
 })
-export const {getProductCard,getLanguage,getUpdateLan} =darkSlice.actions
+
+export const {getProductCard,getJuiceCard,getLanguage,getUpdateLan} =darkSlice.actions
 export default darkSlice.reducer
