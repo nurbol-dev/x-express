@@ -1,0 +1,39 @@
+.product-juice{
+  padding-left: 100px;
+  position: fixed;
+  z-index: 100;
+  left: 250px;
+  top: 200px;
+  .juice-content{
+    text-align: center;
+    color: white;
+    background-color: #8C52FF;
+    width: 250px;
+    height: 350px;
+    border-radius: 30px;
+    h2{
+      padding-top: 30px;
+    }
+    .juice-card{
+      //margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        border: 1px solid white;
+        //text-align: center;
+        border-radius: 20px;
+        width: 180px;
+        height: 40px;
+        margin-top: 20px;
+
+      }
+    }
+  }
+}

@@ -3,11 +3,13 @@ import {createSlice} from "@reduxjs/toolkit";
 interface IDarkSlice {
     dark: boolean,
     productCard: boolean
+    juiceCard: boolean
 }
 
 const initialState: IDarkSlice = {
     dark: false,
-    productCard: false
+    productCard: false,
+    juiceCard: false
 }
 
 export const darkSlice = createSlice({
@@ -16,8 +18,11 @@ export const darkSlice = createSlice({
     reducers: {
         getProductCard(state, action) {
             state.productCard = action.payload
+        },
+        getJuiceCard(state, action) {
+            state.juiceCard = action.payload
         }
     }
 })
-export const {getProductCard} =darkSlice.actions
+export const {getProductCard, getJuiceCard} =darkSlice.actions
 export default darkSlice.reducer
