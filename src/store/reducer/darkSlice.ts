@@ -5,7 +5,7 @@ interface IDarkSlice {
     productCard: boolean
     juiceCard: boolean
     language: boolean,
-    upDateLan: string,
+    upDateLan: string
 }
 
 const data: any = localStorage.getItem("date")
@@ -36,6 +36,5 @@ export const darkSlice = createSlice({
         }
     }
 })
-
-export const {getProductCard,getJuiceCard,getLanguage,getUpdateLan} =darkSlice.actions
+export const {getProductCard,getLanguage,getUpdateLan, getJuiceCard} =darkSlice.actions
 export default darkSlice.reducer
