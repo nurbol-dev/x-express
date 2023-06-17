@@ -5,15 +5,21 @@ import {TbBread} from "react-icons/tb";
 import {BiTestTube} from "react-icons/bi";
 import {RiAliensLine} from "react-icons/ri";
 import {useAppSelector} from "../../../hooks/useAppSelector";
+import {getJuiceCard, getProductCard} from "../../../store/reducer/darkSlice";
+import {useAppDispatch} from "../../../hooks/useAppDispatch";
 
 
 const ProductCard = () => {
-    const {productCard} = useAppSelector(state => state.dark)
+    const dispatch = useAppDispatch();
+    const {productCard, juiceCard} = useAppSelector(state => state.dark)
+
+    const getJuice = () => {
+        dispatch(getJuiceCard(!juiceCard))
+    }
     return (
         <>
             {
                 productCard ?
-
                     <div className="product-card">
                         <div className="container">
                             <div className="product-card-content">
@@ -24,9 +30,9 @@ const ProductCard = () => {
                                             <GiFruitBowl className='product-icon'/>
                                             <p className='product-mail'> Vegetables furies</p>
                                         </div>
-                                        <div className='product-card-info' >
+                                        <div onClick={ () => getJuice()} className='product-card-info' >
                                             <GiBeerBottle className='product-icon'/>
-                                            <p className='product-mail'>Juices</p>
+                                            <p  className='product-mail'>Juices</p>
                                         </div>
                                         <div className='product-card-info'>
                                             <TbBread className='product-icon'/>
