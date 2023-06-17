@@ -1,20 +1,44 @@
-.product-list{
+.product-list {
   margin-left: 100px;
   padding: 7vh 0;
-  .container{
-    .search-block{
+  position: relative;
+  .container {
+    .search-block {
       text-align: center;
-      &-list{
+      display: flex;
+      justify-content: center;
+
+      &-list {
         width: 250px;
         height: 25px;
         background: #111111;
         border-radius: 20px;
         padding-left: 30px;
-        margin-bottom: 70px ;
+        margin-bottom: 70px;
         color: white;
       }
+      &-selects {
+        width: 100px;
+        height: 35px;
+        margin: 0 10px;
+        border-radius: 10px;
+        &-options {
+          width: 100px;
+          height: 100px;
+
+        }
+        option {
+          width: 200px;
+          height: 100px;
+        }
+      }
     }
-    .product-block{
+
+    .product-block {
+      position: fixed;
+      height: 500px;
+      bottom: 50px;
+      overflow-y: scroll;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -22,39 +46,47 @@
 
     }
   }
-  &-content{
+
+  &-content {
     cursor: pointer;
     background: #5E17EB;
     width: 250px;
     height: 400px;
     border-radius: 30px;
-    &-desc{
+
+    &-desc {
       display: flex;
       align-items: center;
       flex-direction: column;
       margin-top: 50px;
-      &-image img{
+
+      &-image img {
         width: 200px;
         height: 200px;
         object-fit: contain;
       }
-      &-info{
+
+      &-info {
         color: white;
-        h1{
+
+        h1 {
           font-weight: 400;
           font-size: 30px;
         }
       }
-      &-card{
+
+      &-card {
         display: flex;
         align-items: center;
         gap: 100px;
         margin-top: 50px;
-        .icon-card{
+
+        .icon-card {
           color: white;
           font-size: 30px;
         }
-        p{
+
+        p {
           font-size: 20px;
           color: #00BF63;
           text-decoration: underline;
@@ -63,4 +95,13 @@
     }
   }
 
+}
+.hidden {
+  background: white;
+  width: 28px;
+  height: 512px;
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 190px;
 }
