@@ -1,0 +1,18 @@
+.language {
+  position: fixed;
+  bottom: 19.5%;
+  left: 90px;
+  &--group {
+    display: flex;
+    flex-direction: column;
+    &__ru {
+      background: linear-gradient(#ffe4e4, #182b5e, #ea0606);
+    }
+    button {
+
+      border: none;
+      margin: 6px;
+      padding: 4px 8px;
+    }
+  }
+}
