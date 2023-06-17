@@ -4,7 +4,7 @@ interface IDarkSlice {
     dark: boolean,
     productCard: boolean,
     language: boolean,
-    upDateLan: string
+    upDateLan: string,
 }
 
 const data: any = localStorage.getItem("date")
