@@ -6,6 +6,7 @@ import ProductCard from "./components/pages/product-card/Product-card";
 import ProductJuices from "./components/pages/product-juice/Product-juices";
 import Language from "./components/pages/language/Language";
 import LogIn from "./components/pages/logIn";
+import ProductModal from "./components/pages/product-modal/Product-modal";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <ProductCard/>
             <ProductList/>
             <ProductJuices/>
+            <ProductModal/>
         </>
     );
 }

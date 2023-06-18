@@ -1,0 +1,56 @@
+
+.blur-modal{
+  .product-modal{
+    position: fixed;
+    left: 40%;
+    top: 120px;
+    background-color: #5E17EB;
+    width: 430px;
+    height: 440px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    &-content{
+      &-date{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        &-img img{
+          max-width: 200px;
+          object-fit: cover;
+        }
+        &-info{
+          background-color: #451DC1;
+          width: 160px;
+          height: 170px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          &-card{
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+      &-price{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        .price-modal{
+          color: #00BF63;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

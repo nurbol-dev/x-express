@@ -5,7 +5,8 @@ interface IDarkSlice {
     productCard: boolean
     juiceCard: boolean
     language: boolean,
-    upDateLan: string
+    upDateLan: string,
+    detail: Partial<any>
 }
 
 const data: any = localStorage.getItem("date")
@@ -15,7 +16,8 @@ const initialState: IDarkSlice = {
     productCard: false,
     juiceCard: false,
     language: false,
-    upDateLan: JSON.parse(data) || ""
+    upDateLan: JSON.parse(data) || "",
+    detail: {}
 }
 
 export const darkSlice = createSlice({
@@ -33,8 +35,11 @@ export const darkSlice = createSlice({
         },
         getUpdateLan(state, {payload}) {
             state.upDateLan = payload
+        },
+        getDetailCard(state, action){
+            state.detail = action.payload
         }
     }
 })
-export const {getProductCard,getLanguage,getUpdateLan, getJuiceCard} =darkSlice.actions
+export const {getProductCard,getLanguage,getUpdateLan, getJuiceCard,getDetailCard} =darkSlice.actions
 export default darkSlice.reducer

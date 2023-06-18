@@ -5,16 +5,22 @@ import {MdFavoriteBorder} from "react-icons/md";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
 import {getValue} from "../../../store/reducer/test";
+import {getModal} from "../../../store/reducer/logIn";
+import {getDetailCard} from "../../../store/reducer/darkSlice";
+import ProductModal from "../product-modal/Product-modal";
 
 const ProductList = () => {
     const {productCard} = useAppSelector(state => state.dark)
     const {value} = useAppSelector(s => s.test)
     const dispatch = useAppDispatch()
     const setValue = (e: any) => dispatch(getValue(e))
-
+    const getDetailModal = (el:any) => {
+      dispatch(getDetailCard(el))
+    }
 
     return (
         <>
+            {/*<ProductModal/>*/}
             <div className="product-list">
                 <div className="container">
                     <div className="search-block">
@@ -34,7 +40,7 @@ const ProductList = () => {
                                 <>
                                     {
                                         value !== el.category ?
-                                            <div className='product-list-content'>
+                                            <div className='product-list-content' onClick={() =>  getDetailModal(el)}>
                                                 <div className="product-list-content-desc">
                                                     <div className='product-list-content-desc-image'>
                                                         <img src={el.image} alt=""/>
