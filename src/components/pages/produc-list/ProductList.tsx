@@ -32,7 +32,6 @@ const ProductList = () => {
                         </select>
                     </div>
 
-                    <div className="hidden"></div>
 
                     <div className='product-block'>
                         {
