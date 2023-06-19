@@ -6,21 +6,19 @@ import {CgDarkMode} from "react-icons/cg";
 import {SlBasket} from "react-icons/sl";
 import {MdFavoriteBorder, MdOutlineTextsms} from "react-icons/md";
 import {BiUserCircle} from "react-icons/bi";
-import {NavLink, useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {useAppDispatch} from "../../hooks/useAppDispatch";
 import {useAppSelector} from "../../hooks/useAppSelector";
-import {getLanguage, getProductCard} from "../../store/reducer/darkSlice";
+import {darkMode, getLanguage, getProductCard} from "../../store/reducer/darkSlice";
 import logo from "../../assets/image/logos.png"
 import kg from "../../assets/image/flagKg.png"
 import en from "../../assets/image/flagEn.png"
 import ru from "../../assets/image/flagRu.png"
-import {uptime} from "os";
 import {getModal} from "../../store/reducer/logIn";
 const Header = () => {
     const dispatch = useAppDispatch();
-    const {productCard, language, upDateLan} = useAppSelector(state => state.dark)
+    const {productCard,dark, language, upDateLan} = useAppSelector(state => state.dark)
     const {modals} = useAppSelector(s => s.logIn)
-
     const getProduct = () => {
         dispatch(getProductCard(!productCard))
     }
@@ -44,7 +42,7 @@ const Header = () => {
                     <div onClick={() => {
                         getProduct()
                     }}><BsBoxSeam className="header--nav__btn"/></div>
-                    <CgDarkMode className="header--nav__btn"/>
+                    <CgDarkMode className="header--nav__btn" onClick={() => dispatch(darkMode(dark))}/>
                     <SlBasket className="header--nav__btn"/>
                 </div>
                 <div className="header--nav-two">

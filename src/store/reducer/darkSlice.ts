@@ -38,8 +38,11 @@ export const darkSlice = createSlice({
         },
         getDetailCard(state, action){
             state.detail = action.payload
+        },
+        darkMode(state, {payload}) {
+            state.dark = !payload
         }
     }
 })
-export const {getProductCard,getLanguage,getUpdateLan, getJuiceCard,getDetailCard} =darkSlice.actions
+export const {darkMode,getProductCard,getLanguage,getUpdateLan, getJuiceCard,getDetailCard} =darkSlice.actions
 export default darkSlice.reducer
