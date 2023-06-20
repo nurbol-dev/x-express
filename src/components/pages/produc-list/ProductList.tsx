@@ -14,8 +14,8 @@ const ProductList = () => {
     const {value} = useAppSelector(s => s.test)
     const dispatch = useAppDispatch()
     const setValue = (e: any) => dispatch(getValue(e))
-    const getDetailModal = (el:any) => {
-      dispatch(getDetailCard(el))
+    const getDetailModal = (el: any) => {
+        dispatch(getDetailCard(el))
     }
 
     return (
@@ -39,7 +39,7 @@ const ProductList = () => {
                                 <>
                                     {
                                         value !== el.category ?
-                                            <div className='product-list-content' onClick={() =>  getDetailModal(el)}>
+                                            <div className='product-list-content' onClick={() => getDetailModal(el)}>
                                                 <div className="product-list-content-desc">
                                                     <div className='product-list-content-desc-image'>
                                                         <img src={el.image} alt=""/>
