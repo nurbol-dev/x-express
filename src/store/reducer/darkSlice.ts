@@ -1,4 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {Simulate} from "react-dom/test-utils";
+import dragStart = Simulate.dragStart;
 
 interface IDarkSlice {
     dark: boolean,
@@ -39,10 +41,13 @@ export const darkSlice = createSlice({
         getDetailCard(state, action){
             state.detail = action.payload
         },
+        getDeleteCard(state,{payload}) {
+            state.detail = state.detail.id === payload.id ? {} : payload
+        },
         darkMode(state, {payload}) {
             state.dark = !payload
         }
     }
 })
-export const {darkMode,getProductCard,getLanguage,getUpdateLan, getJuiceCard,getDetailCard} =darkSlice.actions
+export const {getDeleteCard,darkMode,getProductCard,getLanguage,getUpdateLan, getJuiceCard,getDetailCard} =darkSlice.actions
 export default darkSlice.reducer

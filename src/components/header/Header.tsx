@@ -15,9 +15,10 @@ import kg from "../../assets/image/flagKg.png"
 import en from "../../assets/image/flagEn.png"
 import ru from "../../assets/image/flagRu.png"
 import {getModal} from "../../store/reducer/logIn";
+
 const Header = () => {
     const dispatch = useAppDispatch();
-    const {productCard,dark, language, upDateLan} = useAppSelector(state => state.dark)
+    const {productCard, dark, language, upDateLan} = useAppSelector(state => state.dark)
     const {modals} = useAppSelector(s => s.logIn)
     const getProduct = () => {
         dispatch(getProductCard(!productCard))

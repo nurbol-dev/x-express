@@ -8,11 +8,10 @@ import Language from "./components/pages/language/Language";
 import LogIn from "./components/pages/logIn";
 import ProductModal from "./components/pages/product-modal/Product-modal";
 import {useAppSelector} from "./hooks/useAppSelector";
-import {useAppDispatch} from "./hooks/useAppDispatch";
+import Favorite from "./components/pages/favorite/favorite";
 
 function App() {
     const {dark} = useAppSelector(s => s.dark)
-    const dispatch = useAppDispatch()
 
     return (
         <div style={{background: dark ? "#1d1d1d" : "", position: "fixed", width: "100%", height: "100%"}}>
@@ -23,6 +22,7 @@ function App() {
             <ProductList/>
             <ProductJuices/>
             <ProductModal/>
+            <Favorite/>
         </div>
     );
 }
