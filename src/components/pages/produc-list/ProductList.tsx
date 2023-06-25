@@ -27,7 +27,7 @@ const ProductList = () => {
                         <input className='search-block-list' type="text" placeholder='search'/>
                         <select onChange={(e) => setValue(e.target.value)} className="search-block-selects">
                             <option value="Hot" className="search-block-selects-options">Juice</option>
-                            <option value="Juice">Hot</option>
+                            <option value="Juice">Hott</option>
                             <option value="">all</option>
                         </select>
                     </div>
